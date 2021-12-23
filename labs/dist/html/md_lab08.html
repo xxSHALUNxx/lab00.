@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Масиви: lab08</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Масиви
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Демонстрація документування коду засобами `doxygen`</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">lab08 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>Родительский класс, не несущий никакой смысловой нагрузкиДанный класс имеет только одну простую цель: проиллюстрировать то,как Doxygen документирует наследование */</p>
+<p>Модуль 3. Основи документування Лабораторна робота.</p>
+<p>№8.1. Вступ до документації коду.</p>
+<p>Как не стоит документировать код:</p>
+<p>Doxygen документація:</p>
+<p>Установка и настройка</p>
+<p>Скачать останню версію Doxygen можно на ліцензійном сайті, дистрибутива якої доступні для большості популярних операційних систем, крім того, вы можете користуватися вашим пакетним менеджером. для комфортной и полнофункциональной работы рекомендуется установить Graphviz.</p>
+<p>Далее работа с Doxygen весьма тривиальна: достаточно запустить программу, указав ей путь к файлу с настройками.</p>
+<p>doxygen &lt;config_file&gt;</p>
+<p>Но в этом файле и вся тонкость. Дело в том, что каждому проекту соответствует свой файл настроек, в котором может быть прописан путь до исходников проекта, путь, по которому должна быть создана документация, а также большое число других разнообразных опций, которые подробно описаны в документации, и которые позволяют максимально настроить документацию проекта под свои нужды.</p>
+<p>В принципе, для редактирования данного файла и, вообще, работой с Doxygen, можно воспользоваться программой Doxywizard, которая чаще всего идёт вместе с Doxygen и которая позволяет чуть удобнее работать с файлом настроек (слева – Doxywizard; справа – файл открытый в текстовом редакторе):</p>
+<p>Итак, приступим к созданию файла с настройками. Вообще, если вы используете Doxywizard, то он будет создан автоматически, в противном случае для создания этого файла необходимо запустить программу Doxygen с ключом <em>-g</em> (от generate):</p>
+<p>doxygen -g &lt;config_name&gt;</p>
+<p>Рассмотрим основные опции, которые могут вам пригодится, чтобы создать первую вашу документацию:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><b>Тэг</b> </th><th class="markdownTableHeadLeft"><b>Назначение</b> </th><th class="markdownTableHeadLeft">По умолчанию  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">DOXYFILE_ENCODING </td><td class="markdownTableBodyLeft">Кодировка, которая используется для всех символов в данном файле настроек </td><td class="markdownTableBodyLeft">UTF-8  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">OUTPUT_LANGUAGE </td><td class="markdownTableBodyLeft">Устанавливает язык, на котором будет сгенерирована документация </td><td class="markdownTableBodyLeft">English  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">PROJECT_NAME </td><td class="markdownTableBodyLeft">Название проекта, которое может представлять собой единое слово или последовательность слов (если вы редактируете вне Doxywizard, последовательность слов необходимо поместить в двойные кавычки) </td><td class="markdownTableBodyLeft">My Project  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">PROJECT_NUMBER </td><td class="markdownTableBodyLeft">Данный тэг может быть использован для указания номера проекта или его версии </td><td class="markdownTableBodyLeft">—  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">PROJECT_BRIEF </td><td class="markdownTableBodyLeft">Краткое однострочное описание проекта, которое размещается сверху каждой страницы и даёт общее представление о назначении проекта </td><td class="markdownTableBodyLeft">—  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">OUTPUT_DIRECTORY </td><td class="markdownTableBodyLeft">Абсолютный или относительный путь, по которому будет сгенерирована документация </td><td class="markdownTableBodyLeft">Текущая директория  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">INPUT </td><td class="markdownTableBodyLeft">Список файлов и/или директорий, разделенных пробелом, которые содержат в себе исходные коды проекта </td><td class="markdownTableBodyLeft">Текущая директория  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">RECURSIVE </td><td class="markdownTableBodyLeft">Используется в том случае, если необходимо сканировать исходные коды в подпапках указанных директорий </td><td class="markdownTableBodyLeft">NO  </td></tr>
+</table>
+<p>После того, как мы внесли необходимые изменения в файл с настройками (например, изменили язык, названия проекта и т.п.) необходимо сгенерировать документацию.</p>
+<p>Для её генерации можно воспользоваться Doxywizard (для этого необходимо указать рабочую директорию, из которой будут браться исходные коды, перейти на вкладку «Run» и нажать «Run doxygen») или запустив программу Doxygen, указав ей в качестве параметра путь к файлу с настройками:</p>
+<p>doxygen &lt;config_file&gt;</p>
+<p>Основи документації Doxygen</p>
+<p>Теперь, когда мы разобрались с тем, как настраивать Doxygen и работать с ним, впору разобраться с тем, как необходимо документировать код, основными принципами и подходами.</p>
+<p>Документация кода в Doxygen осуществляется при помощи документирующего блока. При этом существует два подхода к его размещению:</p>
+<ol type="1">
+<li>Он может быть размещён перед или после объявления или определения класса, члена класса, функции, пространства имён и т.д.;</li>
+</ol>
+<ol type="1">
+<li>Либо его можно располагать в произвольном месте (и даже другом файле), но для этого потребуется явно указать в нём, к какому элементу кода он относится. Мы не будет рассматривать этот подход, поскольку даже разработчики рекомендуют его избегать, но если интересно, то подробнее о нём можно прочитать в документации.</li>
+</ol>
+<p>Структурно, любой документирующий блок является комментарием, просто оформленным специальным образом, поэтому естественно, что его вид зависит от используемого языка (подробнее об этом можно прочитать в соответствующем разделе документации). Поэтому далее мы остановимся на рассмотрении синтаксиса для C-подобных языков (C/C++/C#/Objective-C/PHP/Java).</p>
+<p>Сразу отметим, что, вообще, всего существует два основных типа документирующих блоков: многострочный блок и однострочный блок.</p>
+<p>Разница между ними чуть более сильная, чем между однострочным и многострочным комментарием. Дело в том, что текст, написанный в однострочном блоке относится к краткому описанию документируемого элемента (сродни заголовку), а текст, написанный в многострочном блоке относится к подробному описанию. Про эту разницу не следует забывать. <a class="anchor" id="autotoc_md0"></a></p><h5>**Пример документации**</h5>
+<p>Теперь рассмотрим то, как это будет выглядеть на практике. Ниже представлен документированный код некоторого класса в соответствии с теми правилами, которые мы рассматривали ранее.</p>
+<p>/*!</p>
+<p>class Parent</p>
+<p>{public:Parent();</p>
+<p>~Parent();</p>
+<p>};</p>
+<p>В итоге Doxygen сформирует на основе данных комментариев следующую красиво оформленную страничку (здесь приведена вырезка из неё):</p>
+<p>Теперь, когда мы научились основам, пришла пора познакомиться с тем, как можно детализировать документацию. Инструментом для этого являются команды. </p>
+<h4><a class="anchor" id="autotoc_md1"></a>
+&lt;em&gt;&lt;strong&gt;Команды&lt;/strong&gt;&lt;/em&gt;</h4>
+<p>С несколькими из команд в Doxygen мы успели познакомиться (речь идёт о *</p><ul>
+<li>и *</li>
+</ul>
+<p>*), однако на самом деле их значительно больше. Полный их список приведён в <a href="http://www.stack.nl/~dimitri/doxygen/manual/commands.html">официальной документации</a>.</p>
+<p>Вообще, любая команда в Doxygen представляет собой слово на английском языке предваренное символом "\" или "@" (обе записи тождественны) и таких команд очень много, порядка двухсот. Приведём для примера несколько таких команд:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><b>Команда</b> </th><th class="markdownTableHeadLeft"><b>Значение</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><dl class="section author"><dt>Автори</dt><dd></dd></dl>
+</td><td class="markdownTableBodyLeft">Указывает автора или авторов  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><dl class="section version"><dt>Версія</dt><dd></dd></dl>
+</td><td class="markdownTableBodyLeft">Используется для указания версии  </td></tr>
+</table>
+<p>||| |</p><dl class="section date"><dt>Дата</dt><dd>|Предназначена для указания даты разработки| | </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000001">Дефект:</a></b></dt><dd>|Перечисление известных ошибок| |</dd></dl>
+<dl class="section warning"><dt>Застереження</dt><dd>|Предупреждение для использования| |</dd></dl>
+<dl class="section copyright"><dt>Копірайт</dt><dd>|Используемая лицензия| | </dd></dl>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>
